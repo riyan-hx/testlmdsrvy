@@ -15,7 +15,7 @@ A 9-minute, mobile-first survey for psychologists and counsellors in Kerala, bui
    - Who has access: **Anyone**
 4. Authorise when Google asks (it needs access to this sheet only).
 5. Copy the web app URL (ends in `/exec`).
-6. In `index.html`, set:
+6. In `index.html`, set (already done for the current deployment):
    ```js
    const SHEET_ENDPOINT='https://script.google.com/macros/s/…/exec';
    ```
@@ -28,7 +28,7 @@ Changing `Code.gs` later: **Deploy → Manage deployments → Edit → New versi
 | Tab | One row per | Notes |
 | --- | --- | --- |
 | Responses | respondent | Saved after every screen, so partial answers show drop-off. `status` is `started`, `screened_out` or `completed`; `last_question` is where they stopped. |
-| Contacts | pilot opt-in | Name, WhatsApp, email, call slot. Kept apart from answers; don't share this tab. |
+| Contacts | respondent | Name (asked first), WhatsApp, email, pilot choice and call slot. Kept apart from answers; don't share this tab. |
 
 Columns hold readable labels (e.g. "Chasing payments"), not codes. New fields added to the survey become new columns automatically.
 
