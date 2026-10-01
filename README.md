@@ -4,12 +4,12 @@ A 9-minute, mobile-first survey for psychologists and counsellors in Kerala, bui
 
 - Page: `index.html` (static, deploy on Vercel with no build settings)
 - Backend: `Code.gs`, a Google Apps Script web app bound to the responses sheet
-- Sheet: [Lumid Psychologist Survey — Responses](https://docs.google.com/spreadsheets/d/1WyOloUyGoSxoD1MSwBwEp6wMxx75jDXpD_vg1-A46p4/edit)
+- Sheet: [Lumid Psychologist Survey v2 — Responses](https://docs.google.com/spreadsheets/d/1XpQ_3cn_NbTxVlL4NWmV0ZqmWhRl99U4tqtMVCIJSdo/edit)
 
 ## Connect the sheet (one time, ~5 minutes)
 
 1. Open the responses sheet → **Extensions → Apps Script**.
-2. Replace the editor contents with `Code.gs` and save.
+2. Replace the editor contents with `Code.gs` and save. Optional: choose `setup` in the toolbar and click **Run** to (re)create both tabs.
 3. **Deploy → New deployment** → type **Web app**.
    - Execute as: **Me**
    - Who has access: **Anyone**
