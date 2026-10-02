@@ -1,5 +1,5 @@
 /**
- * Lumid psychologist survey — Google Sheets backend (v2).
+ * Lumid psychologist survey — Google Sheets backend (v3).
  *
  * Setup: open the responses sheet → Extensions → Apps Script, paste this file, save.
  * Run setup() once (Run ▸ setup) to create/format both tabs.
@@ -10,10 +10,12 @@ const TABS = {
   Responses: [
     'submitted_at', 'updated_at', 'response_id', 'status', 'last_question', 'survey_version', 'src', 'ref', 'duration_s', 'device',
     'A1_role', 'A1_other', 'A2_paying_clients', 'A3_districts', 'A4_years', 'A5_setup', 'A6_clients_per_week', 'A7_online_pct',
+    'T1_digital_comfort', 'T2_digital_tools', 'T3_ai_usage', 'T3a_ai_uses', 'T4_adoption_barriers',
     'B1_tools', 'B1_other', 'B1a_software_gaps', 'B2_booking', 'B3_payment_timing', 'B4_admin_hrs_week', 'B5_notes_method', 'B6_language',
+    'W1_records', 'W2_consent', 'W3_scales', 'W3a_scale_delivery', 'W4_between_sessions', 'W5_info_sharing',
     'C1_pain_rank', 'C1_none', 'C2_noshows_month', 'C3_story', 'C4_workaround', 'C4_other',
     'D1_voice_notes', 'D1_brief', 'D1_checkins', 'D1_dropoff_alert', 'D1_booking', 'D1_reminders', 'D1_progress', 'D2_one_pick', 'D3_wish',
-    'E1_ai_comfort', 'E2_blockers', 'E3_trust', 'F1_tool_spend', 'F2_pricing_model', 'F3_good_deal_inr', 'F3_too_expensive_inr',
+    'E0_ai_knowledge', 'E0a_ai_helpful_for', 'E0b_ai_with_clients', 'E0c_guidelines', 'E0d_training', 'E1_ai_comfort', 'E2_blockers', 'E3_trust', 'F1_tool_spend', 'F2_pricing_model', 'F3_good_deal_inr', 'F3_too_expensive_inr',
     'G1_pilot', 'exit_email',
   ],
   Contacts: ['submitted_at', 'updated_at', 'response_id', 'name', 'whatsapp', 'email', 'pilot', 'call_slot'],
@@ -37,7 +39,7 @@ function doPost(e) {
 }
 
 function doGet() {
-  return reply({ ok: true, service: 'lumid-survey', version: 2 });
+  return reply({ ok: true, service: 'lumid-survey', version: 3 });
 }
 
 /** Run once from the editor: creates both tabs with headers, frozen and styled. */

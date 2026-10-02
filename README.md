@@ -1,6 +1,6 @@
 # Psychologist survey
 
-A 9-minute, mobile-first survey for psychologists and counsellors in Kerala, built in the Evo v3 design system. Answers go to a Google Sheet.
+A 10-minute, mobile-first research survey ("Technology Integration in Mental Healthcare Practice") for psychologists and counsellors in Kerala, built in the Evo v3 design system. Answers go to a Google Sheet.
 
 - Page: `index.html` (static, deploy on Vercel with no build settings)
 - Backend: `Code.gs`, a Google Apps Script web app bound to the responses sheet
